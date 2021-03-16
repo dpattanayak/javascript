@@ -1,0 +1,35 @@
+Javascript:
+    ✔ Section1
+        Case Types
+        Variables
+        Datatypes
+        Type Conversion and Coercion
+
+    ✔ Section2
+        String
+        Template Literals
+        Array
+        Object
+        Operators
+        Conditions
+
+    ✔ Section3
+        Loops
+        Function
+        Window
+
+    ✔ Section4
+        Document
+        Events
+        Math Object
+        Date
+
+    ✔ Project1
+        Todo app
+
+    ✔ Section5
+        ES6 Class
+
+    ☐ Project 2
+        Books Library
+        
