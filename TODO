@@ -1,11 +1,11 @@
 Javascript:
-    ✔ Section1
+    ✔ Section1      @done(21-03-13 13:55)
         Case Types
         Variables
         Datatypes
         Type Conversion and Coercion
 
-    ✔ Section2
+    ✔ Section2      @done(21-03-13 21:26)
         String
         Template Literals
         Array
@@ -13,23 +13,23 @@ Javascript:
         Operators
         Conditions
 
-    ✔ Section3
+    ✔ Section3      @done(21-03-14 11:00)
         Loops
         Function
         Window
 
-    ✔ Section4
+    ✔ Section4      @done(21-03-15 20:57)
         Document
         Events
         Math Object
         Date
 
-    ✔ Project1
+    ✔ Project1      @done(21-03-15 17:58)
         Todo app
 
-    ✔ Section5
+    ✔ Section5      @done(21-03-16 11:30)
         ES6 Class
 
-    ✔ Project 2
+    ✔ Project 2     @done(21-03-16 21:00)
         Books Library
         
