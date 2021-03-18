@@ -108,40 +108,44 @@ let newProgrammer = new Programmer('Debidatta', 3, 'Software developer', 'MEAN S
 
 
 
-// Promises
+/*
+    Promises - for solve the problem of nested callback 
 
-function addNewStudent(studentData) {
-    console.log('Init Promise')
-    return new Promise(function (resolve, reject) {
-        setTimeout(function (err) {
-            students.push(studentData)
-            if (!err) {
-                resolve(students);
-            } else {
-                reject(err);
-            }
-        }, 2000)
-    })
-}
-
-let students = [
-    {
-        name: 'Rohit',
-        age: 22
-    },
-    {
-        name: 'Rakesh',
+    function addNewStudent(studentData) {
+        console.log('Init Promise')
+        return new Promise(function (resolve, reject) {
+            setTimeout(function (err) {
+                students.push(studentData)
+                if (!err) {
+                    resolve(students);
+                } else {
+                    reject(err);
+                }
+            }, 2000)
+        })
+    }
+    
+    let students = [
+        {
+            name: 'Rohit',
+            age: 22
+        },
+        {
+            name: 'Rakesh',
+            age: 25
+        }
+    ]
+    
+    let newStudent = {
+        name: 'Munna',
         age: 25
     }
-]
+    
+    addNewStudent(newStudent).then(function (response) {    
+        console.log('Resolved :', response)
+    }).catch(function (error) {
+        console.log('Rejected :',error)
+    })
+*/
 
-let newStudent = {
-    name: 'Munna',
-    age: 25
-}
 
-addNewStudent(newStudent).then(function (response) {    
-    console.log('Resolved :', response)
-}).catch(function (error) {
-    console.log('Rejected :',error)
-})

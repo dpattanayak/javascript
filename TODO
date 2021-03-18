@@ -27,8 +27,8 @@
         ✔ Section5      
             ✔ Class     @done(21-03-16 11:30)
             ✔ AJAX      @done(21-03-18 17:27)
-            ☐ Callbacks
-            ☐ Promises
+            ✔ Callbacks @done(21-03-18 18:21)
+            ✔ Promises  @done(21-03-18 19:01)
             ☐ fatch
             ☐ async/await
             
@@ -42,4 +42,7 @@
 
         ✔ Project 2     @done(21-03-16 21:00)
             Books Library ( create books using es6 classes and store in localstorage )
+
+        ✔ Project 3     @done(21-03-18 23:36)
+            News API (https://newsapi.org/) ( create a live news website )
         
