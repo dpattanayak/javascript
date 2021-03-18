@@ -130,7 +130,7 @@ let todayDate = new Date().toLocaleDateString();
 let currentTime = new Date().toLocaleTimeString();
 
 let reminderCount;
-reminderCount = localStorage.getItem('reminderCount');
+reminderCount = sessionStorage.getItem('reminderCount');
 if (reminderCount == null) {
     reminderCount = 0;
 }
@@ -173,7 +173,7 @@ function startReminder() {
 }
 
 function countReminder() {
-    reminderCount += 1;
-    localStorage.setItem('reminderCount',reminderCount);
+    reminderCount += 1;    
+    sessionStorage.setItem('reminderCount',reminderCount);
     document.getElementById('reminderCountElem').innerText = reminderCount;
 }

@@ -1,35 +1,45 @@
-Javascript:
-    ✔ Section1      @done(21-03-13 13:55)
-        Case Types
-        Variables
-        Datatypes
-        Type Conversion and Coercion
+    Sections:
+        ✔ Section1      @done(21-03-13 13:55)
+            Case Types
+            Variables
+            Datatypes
+            Type Conversion and Coercion
 
-    ✔ Section2      @done(21-03-13 21:26)
-        String
-        Template Literals
-        Array
-        Object
-        Operators
-        Conditions
+        ✔ Section2      @done(21-03-13 21:26)
+            String
+            Template Literals
+            Array
+            Object
+            Operators
+            Conditions
 
-    ✔ Section3      @done(21-03-14 11:00)
-        Loops
-        Function
-        Window
+        ✔ Section3      @done(21-03-14 11:00)
+            Loops
+            Function
+            Window
 
-    ✔ Section4      @done(21-03-15 20:57)
-        Document
-        Events
-        Math Object
-        Date
+        ✔ Section4      @done(21-03-15 20:57)
+            Document
+            Events
+            Math Object
+            Date
 
-    ✔ Project1      @done(21-03-15 17:58)
-        Todo app
+        ✔ Section5      
+            ✔ Class     @done(21-03-16 11:30)
+            ✔ AJAX      @done(21-03-18 17:27)
+            ☐ Callbacks
+            ☐ Promises
+            ☐ fatch
+            ☐ async/await
+            
+            ☐ More about ES Versions ( https://www.w3schools.com/js/js_versions.asp )
 
-    ✔ Section5      @done(21-03-16 11:30)
-        ES6 Class
 
-    ✔ Project 2     @done(21-03-16 21:00)
-        Books Library
+    Projects:
+
+        ✔ Project 1     @done(21-03-15 17:58)
+            Todo app ( create a notes taking app that takes the note and stores in the localstorage )
+
+        ✔ Project 2     @done(21-03-16 21:00)
+            Books Library ( create books using es6 classes and store in localstorage )
         

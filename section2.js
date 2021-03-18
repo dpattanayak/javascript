@@ -50,6 +50,56 @@ let studentMark = [79, 77, 64, 55, 44]
     studentMark.pop()
     studentMark.splice(1,2)
     console.log('studentMark: ', studentMark);
+
+    * Array Map
+
+    let arr = [2, 3, 1, 4, 5];
+    let output = arr.map(function (value) {
+        return value + 10;
+    })
+    console.log(output)
+    O/P :  [12, 13, 11, 14, 15] 
+
+
+    * Array Filter
+
+    let arr = [2, 3, 4, 5, 6, 7, 8];
+    let evenNumbers = arr.filter(function (value) {
+        return value % 2 == 0;
+    })
+    console.log(evenNumbers)
+    O/P : [2, 4, 6, 8]
+
+
+    * Array Reduce
+
+    let arr = [21, 22, 344, 889, 110];
+    let sum = arr.reduce(function (total, value) {    
+        return total + value;
+    })
+    console.log(sum);
+    O/P : 1386
+
+
+    * Array Every
+
+    let arr = [2, 3, 4, 5, 6, 7, 8];
+    let checkGT5 = arr.every(function (value) {
+        return value > 5;
+    })
+    console.log(checkGT5)
+    O/P : false - ( all the numbers are not greater than 5 )
+
+
+    * Array Some
+
+    let arr = [2, 3, 4, 5, 6, 7, 8];
+    let checkGT5 = arr.some(function (value) {
+        return value > 5;
+    })
+    console.log(checkGT5)
+    O/P : true - ( some numbers are greater than 5 )
+
 */
 
 
