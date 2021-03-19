@@ -1,4 +1,4 @@
-// Class is a template for creating object
+//* Class is a template for creating object
 
 class Employee {
     constructor(name, experience, role) {
@@ -38,13 +38,15 @@ let newProgrammer = new Programmer('Debidatta', 3, 'Software developer', 'MEAN S
 
 
 /*
-    AJAX - Asynchronous JavaScript And XML.  
+    * AJAX - Asynchronous JavaScript And XML.  
 
     //* GET Method
     
     let xhr = new XMLHttpRequest();
     xhr.open('GET', 'https://jsonplaceholder.typicode.com/todos/1', true);      // method, url, request type async(true) / sync(false)
-    xhr.setRequestHeader('Content-type', 'application/json; charset=UTF-8');
+    xhr.onprogress = function (event) {
+        console.log(`Downloaded ${event.loaded} of ${event.total} bytes`);
+    }
     xhr.onload = function () {
         if (this.status === 200) {
             console.log('Response :', this.responseText)
@@ -76,7 +78,7 @@ let newProgrammer = new Programmer('Debidatta', 3, 'Software developer', 'MEAN S
 
 
 /*
-    Callback - passing a function as argument to call after a task done
+    * Callback - passing a function as argument to call after a task done
     
     function addNewStudent(studentData, callback) {    
         setTimeout(function () {
@@ -109,7 +111,7 @@ let newProgrammer = new Programmer('Debidatta', 3, 'Software developer', 'MEAN S
 
 
 /*
-    Promises - for solve the problem of nested callback 
+    * Promises - for solve the problem of nested callback 
 
     function addNewStudent(studentData) {
         console.log('Init Promise')
@@ -148,4 +150,94 @@ let newProgrammer = new Programmer('Debidatta', 3, 'Software developer', 'MEAN S
     })
 */
 
+/*
+    * Arrow Functions
+    
+    //* Regular Functions
+    
+    function welcome(name) {
+        console.log("Welcome to javascript ", name)
+    }
+    welcome('munna');
+    
+    //* Arrow Functions
+    ((name) => {
+        console.log('Welcome to javascript ',name)
+    })('munna')
 
+    //* single line
+    (() => console.log("hello munna"))() 
+    //* () is function calling and wrapped inside () is declaration
+*/
+
+
+/*
+    * Fetch API
+
+    //* GET 
+    fetch('https://jsonplaceholder.typicode.com/posts/1')
+        .then((response) => response.json())
+        .then((json) => console.log(json))
+    
+    //* POST
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+            method: 'POST',
+            body: JSON.stringify({
+                title: 'foo',
+                body: 'bar',
+                userId: 1,
+            }),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            },
+        })
+        .then((response) => response.json())
+        .then((json) => console.log(json));
+*/
+
+/*
+    * Async and Await
+
+    //* with function name declaration
+    
+    fetchdata = async (url) => {
+        let response = await fetch(url);
+        let json = await response.json();
+        return json;
+    }
+    
+    //* calling function
+    fetchdata('https://jsonplaceholder.typicode.com/posts/1')
+    .then((res) => console.log(res))
+
+    //* without function name
+    
+    (async (url) => {
+        let response = await fetch(url);
+        let json = await response.json();
+        return json;
+    })
+    ('https://jsonplaceholder.typicode.com/posts/1')
+    .then((res) => console.log(res))
+
+    async converts the function to asynchronous, 
+    where await keyword used that call in the background and return a promise
+*/
+
+/*
+    * try catch - used for error handling
+
+    const value = 7.5;
+    
+    update = (newData) => {
+        value = newData;
+    }
+    
+    try {
+        update(10);
+    } catch (error) {
+        console.log(error.name,': ',error.message)
+    } finally {
+        console.log('Running update() finished')
+    }
+*/

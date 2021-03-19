@@ -16,6 +16,23 @@
     * {
       font-family: 'Poppins', sans-serif;
     }
+
+    .display-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .page-item {
+      cursor: pointer;
+    }
+
+    #dropdownContent{
+      max-height: 300px;
+      overflow: auto;
+      cursor: pointer;
+    }
   </style>
   <title>Live News</title>
 </head>
@@ -41,16 +58,40 @@
           </div>
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      </form>
+      <div class="form-inline my-2 my-lg-0">
+        <input id="search" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      </div>
     </div>
   </nav>
 
   <div class="container my-3">
-    <h5>Top News</h5>
+    <div class="row">
+      <h5 class="col-md-10">Top News <span class="badge badge-secondary"></span></h5>
+      <div class="dropdown">
+        <button class="btn btn-secondary btn-sm dropdown-toggle" 
+          type="button" id="dropdownMenuButton" data-toggle="dropdown" 
+          aria-haspopup="true" aria-expanded="false">
+          Change Source
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="dropdownContent">
+          <!-- content through js -->
+        </div>
+      </div>
+    </div>
     <hr>
+
+    <!-- news feed -->
     <ul class="list-unstyled" id="accordionNews"></ul>
+
+    <!-- spinner block -->
+    <div class="display-center" id="spinner">
+      <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+
+    <!-- pagination control block -->
+    <nav aria-label="Page navigation example" id="pagination"></nav>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
