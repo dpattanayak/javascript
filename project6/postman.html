@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@500&family=VT323&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/prism.css">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Post Master</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">Post Master</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Projects
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/project1/todo.html">Notes APP</a>
+                        <a class="dropdown-item" href="/project2/library.html">Books Library</a>
+                        <a class="dropdown-item" href="/project3/news.html">Live News</a>
+                        <a class="dropdown-item" href="/project5/cvScreener.html">CV Screener</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container my-3">
+        <h4 class="my-3">Welcome to Post Master</h4>
+        <form class="formBorder">
+            <!-- URL -->
+            <div class="form-group row">
+                <label for="url" class="col-sm-2 col-form-label">URL</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="url" placeholder="eg: https://api.github.com/users">
+                </div>
+            </div>
+
+            <!-- Request Type Box -->
+            <fieldset class="form-group row">
+                <legend class="col-form-label col-sm-2 float-sm-left pt-0">Request Type</legend>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="requestType" id="get" value="GET" checked>
+                        <label class="form-check-label" for="get">
+                            GET
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="requestType" id="post" value="POST">
+                        <label class="form-check-label" for="post">
+                            POST
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Content Type Box -->
+
+            <fieldset class="form-group row">
+                <legend class="col-form-label col-sm-2 float-sm-left pt-0">Content Type</legend>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="contentType" id="jsonRadio" value="JSON"
+                            checked>
+                        <label class="form-check-label" for="json">
+                            JSON
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="contentType" id="paramsRadio" value="Params">
+                        <label class="form-check-label" for="params">
+                            Custom Parameters
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Parameters Box - hide when content-type json -->
+            <div id="parametersBox">
+                <div class="form-row">
+                    <label for="paramsKey1" class="col-sm-2 col-form-label">Parameter 1</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" id="paramsKey1" placeholder="Enter Parameter 1 Key">
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" id="paramsValue1" placeholder="Enter Parameter 1 Value">
+                    </div>
+                    <button type="button" class="btn btn-primary" id="addParams">&plus;</button>
+                </div>
+                <div id="moreParams"></div>
+            </div>
+
+            <!-- json box - hide when content-type params -->
+            <div class="my-3" id="jsonBox">
+                <div class="form-group row">
+                    <label for="jsonBoxText" class="col-sm-2 col-form-label">Enter JSON here</label>
+                    <div class="col-sm-10">
+                        <pre contenteditable="true"><code class="language-javascript" id="jsonBoxText"></code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- submit button -->
+            <div class="form-group row">
+                <div class="col-sm-12">
+                    <div class="btn btn-primary float-right" id="submitBtn">Submit</div>
+                </div>
+            </div>
+
+            <!-- Response -->
+            <div class="my-4" id="responseBox">
+                <div class="form-group row">
+                    <label for="responseText" class="col-sm-2 col-form-label">Response</label>
+                    <div class="col-sm-10">
+                        <pre class="prismRes"><code class="language-javascript" id="responseText">Your response will appear here ...</code></pre>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+    </script>
+    <script src="./assets/prism.js"></script>
+    <script src="./postman.js"></script>
+</body>
+
+</html>

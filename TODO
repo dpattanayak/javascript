@@ -1,0 +1,62 @@
+    Sections:
+        ✔ Section1      @done(21-03-13 13:55)
+            Case Types
+            Variables
+            Datatypes
+            Type Conversion and Coercion
+
+        ✔ Section2      @done(21-03-13 21:26)
+            String
+            Template Literals
+            Array
+            Object
+            Operators
+            Conditions
+
+        ✔ Section3      @done(21-03-14 11:00)
+            Loops
+            Function
+            Window
+
+        ✔ Section4      @done(21-03-15 20:57)
+            Document
+            Events
+            Math Object
+            Date
+
+        ✔ Section5      
+            ✔ Class             @done(21-03-16 11:30)
+            ✔ AJAX              @done(21-03-18 17:27)
+            ✔ Callbacks         @done(21-03-18 18:21)
+            ✔ Promises          @done(21-03-18 19:01)
+            ✔ Arrow Function    @done(21-03-19 17:53)
+            ✔ fetch             @done(21-03-19 18:39)
+            ✔ async/await       @done(21-03-19 19:16)
+            ✔ try/catch         @done(21-03-19 20:40)
+            
+        ✔ Section6              
+            ✔ Regular Expressions   @done(21-03-20 11:45)
+            ✔ Iterators             @done(21-03-20 15:31)
+            ✔ Generators            @done(21-03-20 15:31)
+            ✔ For..in and For..of   @done(21-03-21 10:27)
+            ✔ Map and Set           @done(21-03-21 13:17)
+            ✔ Destructuring         @done(21-03-21 14:01)
+            
+    Projects:
+
+        ✔ Project 1     @done(21-03-15 17:58)
+            Todo app ( create a notes taking app that takes the note and stores in the localstorage )
+
+        ✔ Project 2     @done(21-03-16 21:00)
+            Books Library ( create books using es6 classes and store in localstorage )
+
+        ✔ Project 3     @done(21-03-19 16:09)
+            News API (https://newsapi.org/) ( create a live news website ) fecate2096@heroulo.com, newsapi@6862                    
+        
+        ✔ Project 4     @done(21-03-20 14:27)
+            Form validation using regex
+
+        ✔ Project 5     @done(21-03-20 20:04)
+            CV Screener
+
+    ☐ ES Versions ( https://www.w3schools.com/js/js_versions.asp )
