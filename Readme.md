@@ -1,3 +1,30 @@
+## **PROJECTS**
+
+##### **Project 1** (Todo App)
+    => Create, Read, Update and Delete Notes 
+    => Search Notes
+    => Store Notes in localstorage
+    => Bootstrap UI
+
+##### **Project 2** (Library App)
+    => Same functionality as Todo App
+    => Practice with form data
+
+##### **Project 3** (News App)
+    => Live News serving web app
+    => Practice Pagination
+
+##### **Project 4** (CV Screener)
+    => Verify Candidates
+    => Practice Array Iteration (next method)
+
+##### **Project 5** (Post Master)
+    => REST Operations
+    => Practice API
+----
+
+## **Basic Terminologies**
+
 ##### **URL** (Uniform Resource Locator)
 
     Query   -- http://example.com/path?query=something
@@ -307,3 +334,7 @@ document.addEventListener('keyup', function(event) {
     }
 });
 ```
+
+
+
+----
