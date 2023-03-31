@@ -19,10 +19,10 @@ function fetchSources(API_KEY) {
 function fetchNews(API_KEY, sources, page, search, date, sortby) {
     let xhr = new XMLHttpRequest();
     let URL = '';
-    if (search != '') {
-        URL = `https://newsapi.org/v2/everything?q=${search}&from=${date}&sortBy=${sortby}&page=${page}&pageSize=20&apiKey=${API_KEY}`
+    if (search != "" && search != undefined) {
+      URL = `https://newsapi.org/v2/everything?q=${search}&from=${date}&sortBy=${sortby}&page=${page}&pageSize=20&apiKey=${API_KEY}`;
     } else {
-        URL = `https://newsapi.org/v2/everything?sources=${sources}&from=${date}&sortBy=${sortby}&page=${page}&pageSize=20&apiKey=${API_KEY}`
+      URL = `https://newsapi.org/v2/everything?sources=${sources}&from=${date}&sortBy=${sortby}&page=${page}&pageSize=20&apiKey=${API_KEY}`;
     }
 
     xhr.open('GET', URL, true);
@@ -74,7 +74,7 @@ function fetchNews(API_KEY, sources, page, search, date, sortby) {
 const API_KEY = 'd43454f393ef417d8fd1a203a918194b';
 let source = 'bbc-news';
 let page = 1;
-let date = new Date().toISOString().split("T")[0]; // format required : 2021-03-19
+let date = new Date(Date.now() - 86400000).toISOString().split("T")[0]; // format required : 2021-03-19 , day : yesterday
 let sortby = 'popularity';
 
 let accordionNews = document.getElementById('accordionNews');
